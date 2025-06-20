@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Payments</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      min-height: 100vh;
+    }
+
+    .container {
+      display: flex;
+      flex: 1;
+    }
+
+    .sidebar {
+      width: 220px;
+      background-color: #2c3e50;
+      color: white;
+      padding: 20px;
+    }
+
+    .sidebar h2 {
+      margin-bottom: 30px;
+      font-size: 22px;
+      text-align: center;
+    }
+
+    .sidebar a {
+      display: block;
+      padding: 10px;
+      margin: 10px 0;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+
+    .sidebar a:hover {
+      background-color: #34495e;
+    }
+
+    .main {
+      flex: 1;
+      padding: 20px;
+    }
+
+    .payment-card {
+      background: white;
+      border: 1px solid #ccc;
+      border-left: 6px solid #e91e63;
+      padding: 15px 20px;
+      margin-bottom: 15px;
+      border-radius: 6px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .payment-card h3 {
+      margin: 0 0 10px 0;
+      color: #e91e63;
+    }
+
+    .payment-card p {
+      margin: 4px 0;
+    }
+
+    footer {
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <img src="logogym.jpg" alt="FitZone Logo" class="logo" style="display: block; margin: 0 auto 20px; max-width: 100px; border-radius: 8px;">
+      <h2>FitZone Admin</h2>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="manageMembers.html">Manage Members</a>
+      <a href="trainerSchedules.html">Trainer Schedules</a>
+      <a href="classBookings.html">Class Bookings</a>
+      <a href="payments.html">Payments</a>
+      <a href="settings.html">Settings</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main">
+      <h1>Payments</h1>
+
+      <div class="payment-card">
+        <h3>Payment #P001</h3>
+        <p><strong>Member:</strong> Ali</p>
+        <p><strong>Amount:</strong> RM 100</p>
+        <p><strong>Date:</strong> June 1</p>
+      </div>
+
+      <div class="payment-card">
+        <h3>Payment #P002</h3>
+        <p><strong>Member:</strong> Sara</p>
+        <p><strong>Amount:</strong> RM 120</p>
+        <p><strong>Date:</strong> June 5</p>
+      </div>
+
+      <div class="payment-card">
+        <h3>Payment #P002</h3>
+        <p><strong>Member:</strong> Ellyana</p>
+        <p><strong>Amount:</strong> RM 150</p>
+        <p><strong>Date:</strong> June 12</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 FitZone Gym & Fitness. All rights reserved.
+  </footer>
+
+</body>
+</html>

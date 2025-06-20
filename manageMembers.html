@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Manage Members</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      min-height: 100vh;
+    }
+
+    .container {
+      display: flex;
+      flex: 1;
+    }
+
+    .sidebar {
+      width: 220px;
+      background-color: #2c3e50;
+      color: white;
+      padding: 20px;
+    }
+
+    .sidebar h2 {
+      margin-bottom: 30px;
+      font-size: 22px;
+      text-align: center;
+    }
+
+    .sidebar a {
+      display: block;
+      padding: 10px;
+      margin: 10px 0;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+
+    .sidebar a:hover {
+      background-color: #34495e;
+    }
+
+    .main {
+      flex: 1;
+      padding: 20px;
+    }
+
+    h1 {
+      margin-top: 0;
+    }
+
+    .search-bar {
+      margin-bottom: 20px;
+    }
+
+    .search-bar input {
+      padding: 10px;
+      width: 300px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .add-member {
+      background: white;
+      padding: 15px;
+      border-radius: 6px;
+      margin-bottom: 20px;
+    }
+
+    .add-member h2 {
+      margin-top: 0;
+    }
+
+    .add-member input, .add-member select {
+      padding: 10px;
+      margin: 8px 0;
+      width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .add-member button {
+      background-color: #e91e63;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .add-member button:hover {
+      background-color: #d81b60;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      margin-top: 10px;
+    }
+
+    th, td {
+      padding: 10px;
+      border: 1px solid #ccc;
+      text-align: left;
+    }
+
+    th {
+      background: #e91e63;
+      color: white;
+    }
+
+    .actions button {
+      padding: 5px 10px;
+      border: none;
+      margin-right: 5px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .edit-btn {
+      background-color: #3498db;
+      color: white;
+    }
+
+    .edit-btn:hover {
+      background-color: #2980b9;
+    }
+
+    .delete-btn {
+      background-color: #e74c3c;
+      color: white;
+    }
+
+    .delete-btn:hover {
+      background-color: #c0392b;
+    }
+
+    footer {
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Sidebar -->
+<div class="sidebar">
+  <!-- Logo -->
+  <img src="logogym.jpg" alt="FitZone Logo" class="logo" style="display: block; margin: 0 auto 20px; max-width: 100px; border-radius: 8px;">
+
+  <h2>FitZone Admin</h2>
+  <a href="dashboard.html">Dashboard</a>
+  <a href="manageMembers.html">Manage Members</a>
+  <a href="trainerSchedules.html">Trainer Schedules</a>
+  <a href="classBookings.html">Class Bookings</a>
+  <a href="payments.html">Payments</a>
+  <a href="settings.html">Settings</a>
+</div>
+
+
+    <!-- Main Content -->
+    <div class="main">
+      <h1>Manage Members</h1>
+
+      <!-- Search -->
+      <div class="search-bar">
+        <input type="text" placeholder="Search members by name or email...">
+      </div>
+
+      <!-- Add Member Form -->
+      <div class="add-member">
+        <h2>Add New Member</h2>
+        <form>
+          <input type="text" placeholder="Full Name" required>
+          <input type="email" placeholder="Email Address" required>
+          <select required>
+            <option value="">Select Status</option>
+            <option value="Active">Active</option>
+            <option value="Inactive">Inactive</option>
+          </select>
+          <button type="submit">Add Member</button>
+        </form>
+      </div>
+
+      <!-- Member Table -->
+      <table>
+        <tr><th>ID</th><th>Name</th><th>Email</th><th>Status</th><th>Actions</th></tr>
+        <tr>
+          <td>001</td>
+          <td>Ali</td>
+          <td>ali@mail.com</td>
+          <td>Active</td>
+          <td class="actions">
+            <button class="edit-btn">Edit</button>
+            <button class="delete-btn">Delete</button>
+          </td>
+        </tr>
+        <tr>
+          <td>002</td>
+          <td>Sara</td>
+          <td>sara@mail.com</td>
+          <td>Inactive</td>
+          <td class="actions">
+            <button class="edit-btn">Edit</button>
+            <button class="delete-btn">Delete</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 FitZone Gym & Fitness. All rights reserved.
+  </footer>
+
+</body>
+</html>

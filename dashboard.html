@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gym & Fitness Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background-color: #f4f4f4;
+    }
+
+    .container {
+      display: flex;
+      flex: 1;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 220px;
+      background-color: #2c3e50;
+      color: white;
+      padding: 20px;
+    }
+
+    .sidebar h2 {
+      margin-bottom: 30px;
+      font-size: 22px;
+      text-align: center;
+    }
+
+    .sidebar a {
+      display: block;
+      padding: 10px;
+      margin: 10px 0;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+
+    .sidebar a:hover {
+      background-color: #34495e;
+    }
+
+    /* Main Content */
+    .main {
+      flex: 1;
+      padding: 20px;
+      overflow-y: auto;
+    }
+
+    header {
+      background-color: #ffffff;
+      padding: 15px 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      margin-bottom: 20px;
+    }
+
+    header h1 {
+      font-size: 24px;
+    }
+
+    .welcome {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    .stats {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .card {
+      flex: 1;
+      min-width: 150px;
+      background-color: #e91e63;
+      color: white;
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .card h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .table-section, .notifications {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    th, td {
+      padding: 12px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+
+    th {
+      background-color: #e91e63;
+      color: white;
+    }
+
+    .notifications p {
+      background-color: #fff3cd;
+      color: #856404;
+      padding: 10px;
+      border-left: 5px solid #ffeeba;
+      margin-bottom: 10px;
+      border-radius: 4px;
+    }
+
+    footer {
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+
+    @media (max-width: 768px) {
+      .stats {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        display: none;
+      }
+
+      .container {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Sidebar -->
+<div class="sidebar">
+  <!-- Logo -->
+  <img src="logogym.jpg" alt="FitZone Logo" class="logo" style="display: block; margin: 0 auto 20px; max-width: 100px; border-radius: 8px;">
+
+  <h2>FitZone Admin</h2>
+  <a href="dashboard.html">Dashboard</a>
+  <a href="manageMembers.html">Manage Members</a>
+  <a href="trainerSchedules.html">Trainer Schedules</a>
+  <a href="classBookings.html">Class Bookings</a>
+  <a href="payments.html">Payments</a>
+  <a href="settings.html">Settings</a>
+</div>
+
+
+
+    <!-- Main Content -->
+    <div class="main">
+      <header>
+        <h1>Welcome, Admin!</h1>
+      </header>
+
+      <section class="welcome">
+        <p>Track gym activity, manage schedules, and monitor system performance all in one place.</p>
+      </section>
+
+      <section class="stats">
+        <div class="card">
+          <h3>Total Members</h3>
+          <p>120</p>
+        </div>
+        <div class="card">
+          <h3>Active Trainers</h3>
+          <p>8</p>
+        </div>
+        <div class="card">
+          <h3>Classes Today</h3>
+          <p>10</p>
+        </div>
+        <div class="card">
+          <h3>Payments This Month</h3>
+          <p>RM 5,300</p>
+        </div>
+      </section>
+
+      <section class="table-section">
+        <h2>Upcoming Classes</h2>
+        <table>
+          <tr>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Class</th>
+            <th>Trainer</th>
+          </tr>
+          <tr>
+            <td>June 19</td>
+            <td>08:00 AM</td>
+            <td>Yoga</td>
+            <td>Jane</td>
+          </tr>
+          <tr>
+            <td>June 19</td>
+            <td>10:00 AM</td>
+            <td>CrossFit</td>
+            <td>Mark</td>
+          </tr>
+          <tr>
+            <td>June 19</td>
+            <td>01:00 PM</td>
+            <td>HIIT</td>
+            <td>Ali</td>
+          </tr>
+        </table>
+      </section>
+
+      <section class="notifications">
+        <h2>Notifications</h2>
+        <p>⚠️ 3 memberships are expiring this week.</p>
+        <p>📌 Trainer schedule updated on June 18.</p>
+        <p>✅ Payment report for June is available.</p>
+      </section>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 FitZone Gym & Fitness. All rights reserved.
+  </footer>
+
+</body>
+</html>
